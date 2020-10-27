@@ -1,0 +1,118 @@
+@charset "utf-8";
+
+
+/* content 1 Item */
+.itemContent {
+    padding: 0 20px;
+}
+.itemContent .itemMenuTab .tab {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    height: 40px;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+    font-size: 14px;
+    padding-top: 10px;
+}
+.itemContent .itemMenuTab .tab .tab1 {
+    border-bottom: 3px solid slateblue;
+}
+
+
+.itemContent .bestItem {
+    position: relative;
+    display: grid;
+    grid-template-columns: 50% auto;
+    height:200px;
+    margin:20px auto;
+    font-size: 14px;
+    line-height: 1.5;
+}
+.itemContent .bestItem > div {
+    display: grid;
+    grid-template-rows: 66.66% 33.33%;
+    padding: 20px;
+    color: #777;
+    height: 100%;
+}
+.itemContent .bestItem .bestItem1 {
+    background: rgba(255, 136, 0, 0.2);
+}
+.itemContent .bestItem .bestItem2 {
+    background: rgba(10, 177, 177, 0.2);
+}
+.itemContent .bestItem .tag {
+    color: #fff;
+    padding: 2px 5px;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+.itemContent .bestItem .bestItem1 .tag {
+    background: rgb(255, 136, 0);
+}
+.itemContent .bestItem .bestItem2 .tag {
+    background: rgb(10, 177, 177);
+}
+.itemContent .bestItem .bestTit h6 {
+    font-size: 17px;
+    color: #000;
+}
+.itemContent .bestItem .mainInfo span {
+    font-size: 24px;
+    font-weight: bold;
+}
+.itemContent .bestItem .bestItem1 .mainInfo span {
+    color:  rgb(255, 136, 0);
+}
+.itemContent .bestItem .bestItem2 .mainInfo span {
+    color:  rgb(10, 177, 177);
+}
+.itemContent .bestItem .explain {
+    font-size: 12px;
+}
+
+
+/* 테마 리스트 스타일 */
+.themeItem > h6 {
+    text-align: center;
+    font-size: 14px;
+    margin: 30px 0 15px;
+}
+.theme {
+    line-height: 1.5;
+}
+.theme ul {
+    padding-bottom: 20px;
+}
+.theme ul li {
+    padding: 20px;
+    border-top: 1px solid #eee;
+}
+.theme .tagLoan {
+    background:  rgb(10, 177, 177);
+    color: #fff;
+    font-size: 12px;
+    padding: 2px 5px;
+    width: 70px;
+}
+.theme .tagSave {
+    background:  rgb(255, 136, 0);
+    color: #fff;
+    font-size: 12px;
+    padding: 2px 5px;
+    width: 70px;
+}
+.theme .info {
+    margin: 5px 0;
+}
+.theme p {
+    font-size: 12px;
+    color: #666;
+}
+.theme h6 {
+    font-size: 16px;
+}
+.theme p span {
+    color: rgb(255, 136, 0);
+    font-weight: bold;
+} 
