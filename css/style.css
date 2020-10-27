@@ -3,6 +3,22 @@
 #wrap {
     background: #fff;
 }
+#onlyMobile {
+    position: fixed; width: 100vw; height: 100vh;
+    top: 0; left: 0;
+    background:darkslateblue;
+    font-size: 30px;
+    z-index: 999999999999999;
+    color: #fff;
+    display: flex; align-items: center;
+    justify-content: center;
+}
+@media screen and (max-width: 768px) {
+    #onlyMobile { display: none;}
+}
+
+
+/* header */
 #header {
     position: fixed;
     top: 0; left: 0; right: 0; z-index: 99999;
