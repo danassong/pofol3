@@ -14,6 +14,9 @@
     font-size: 14px;
     padding-top: 10px;
 }
+.itemContent .itemMenuTab .tab a {
+    display: block;
+}
 .itemContent .itemMenuTab .tab .tab1 {
     border-bottom: 3px solid slateblue;
 }
@@ -24,7 +27,7 @@
     display: grid;
     grid-template-columns: 50% auto;
     height:200px;
-    margin:20px auto;
+    margin:20px auto 40px;
     font-size: 14px;
     line-height: 1.5;
 }
@@ -46,12 +49,16 @@
     padding: 2px 5px;
     margin-bottom: 20px;
     display: inline-block;
+    font-size: 12px;
 }
 .itemContent .bestItem .bestItem1 .tag {
     background: rgb(255, 136, 0);
 }
 .itemContent .bestItem .bestItem2 .tag {
     background: rgb(10, 177, 177);
+}
+.itemContent .bestItem .bestTit p {
+    font-size: 12px;
 }
 .itemContent .bestItem .bestTit h6 {
     font-size: 17px;
@@ -68,34 +75,44 @@
     color:  rgb(10, 177, 177);
 }
 .itemContent .bestItem .explain {
-    font-size: 12px;
+    font-size: 11px;
 }
 
 
 /* 테마 리스트 스타일 */
-.themeItem > h6 {
+.themeItem > h6 , .itemContent > h6 {
     text-align: center;
-    font-size: 14px;
-    margin: 30px 0 15px;
+    font-size: 12px;
+    margin: 20px 0;
+}
+.themeItem > h6 span, .itemContent > h6 span {
+    color: rgb(255, 136, 0);
 }
 .theme {
     line-height: 1.5;
 }
+.theme .themeTit {
+    font-size: 14px;
+    padding: 10px 20px;
+    text-align: center;
+    background: darkslateblue;
+    color: #fff;
+}
 .theme ul {
-    padding-bottom: 20px;
+    padding-bottom: 30px;
 }
 .theme ul li {
     padding: 20px;
-    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
 }
-.theme .tagLoan {
+.theme .loan {
     background:  rgb(10, 177, 177);
     color: #fff;
     font-size: 12px;
     padding: 2px 5px;
     width: 70px;
 }
-.theme .tagSave {
+.theme .save {
     background:  rgb(255, 136, 0);
     color: #fff;
     font-size: 12px;

@@ -188,15 +188,14 @@
 }
 .cont1tab1 ul li {
     border-bottom: 1px solid #eee;
-    padding: 20px 0;
     font-size: 14px;
 }
 .cont1tab1 ul li:nth-child(5), .cont1tab1 ul li:last-child {
-    padding: 20px 0 10px;
     border-bottom: none;
 }
 .cont1tab1 ul li a {
     display: block;
+    padding: 20px 0;
 }
 .cont1tab1 ul li i {
     padding: 0 15px;
@@ -207,7 +206,7 @@
 /* 두번째 content map */
 .cont2map a {
     display: grid;
-    grid-template-columns: 80% 10% 10%;
+    grid-template-columns: auto 40px 40px;
     padding: 20px;
 }
 .cont2map .text {

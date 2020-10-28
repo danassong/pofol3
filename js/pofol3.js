@@ -52,7 +52,56 @@
     })
 
 
-    /* json data 불러오기 기본작업 */
+
+    /* themeItem 페이지 json data 불러오기 기본작업 */
+    var themeItemdata
+    $.ajax({
+        type: 'GET',
+        url: 'data/themeItem.json',
+        beforeSend: function(xhr) {
+            if (xhr.overrideMimeType) {
+                xhr.overrideMimeType('application/json')
+            }
+        },
+        success: function(data) {
+            themeItemdata = data
+        },
+        error: function() {
+            alert(xhr.status + '오류발생')
+        }
+    })
+    /* themeItem 페이지: json 불러오기 */
+    $('#container').on('click', '.cont1tab1 a', function(e) {
+        e.preventDefault()
+        var url = this.href
+        var themeItem = $(this).attr('class')
+        $('#container > #content').remove()
+        $('#container').load(url + " #content", function() {
+            var newContent = ''
+            for (var i in themeItemdata[themeItem]) {
+
+                newContent += `<li><span class="loan">${themeItemdata[themeItem][i].tag}</span>`
+                newContent += `<div class="info"><p>${themeItemdata[themeItem][i].info}</p>`
+                newContent += `<h6>${themeItemdata[themeItem][i].name}</h6></div>`
+                newContent += `<p>최고 <span>${themeItemdata[themeItem][i].price}</span></p></li>`
+            }
+            $('#content .theme').html(`<ul>${newContent}</ul>`)
+        })
+    })
+
+`<ul><li><span class="loan">tag</span>`
+`<div class="info"><p>info</p>`
+`<h6>name</h6></div>`
+`<p>최고 <span>price</span></p></li>`
+
+`<li><span class="save">자동차대출</span>`
+`<div class="info"><p>신차 구매 자금도 은행방문 없이!</p>`
+`<h6>KB 매직카대출(신차 구매)</h6></div>`
+`<p>최고 <span>6천만원</span></p></li></ul>`
+
+
+
+    /* map 페이지 json data 불러오기 기본작업 */
     var centerdata
     $.ajax({
         type: 'GET',
@@ -89,6 +138,8 @@
     })
 
 
+
+    /* notice 페이지 json data 불러오기 기본작업 */
     var noticedata
     $.ajax({
         type: 'GET',

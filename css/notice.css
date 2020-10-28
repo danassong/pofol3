@@ -15,9 +15,8 @@
 }
 .noticeContent .noticeList {
     position: relative;
-    height:300px;
-    display:block;
-    top: 40px;
+    display:inline-block;
+    margin: 40px 0 ;
 }
 .noticeContent .noticeList ul li {
     border-bottom: 1px solid #eee;
