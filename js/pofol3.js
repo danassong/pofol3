@@ -79,14 +79,14 @@
         $('#container').load(url + " #content", function() {
             var newContent = ''
             for (var j in themeItemdata[themeItem]) {
-                    for (var i in themeItemdata[themeItem][j]) {
-                    newContent += `<li><span class="loan">${themeItemdata[themeItem][j][i].tag}</span>`
-                    newContent += `<div class="info"><p>${themeItemdata[themeItem][j][i].info}</p>`
-                    newContent += `<h6>${themeItemdata[themeItem][j][i].name}</h6></div>`
-                    newContent += `<p>최고 <span>${themeItemdata[themeItem][j][i].price}</span> ${themeItemdata[themeItem][j][i].period}</p></li>`
+                for (var i in themeItemdata[themeItem][j]) {
+                newContent += `<li><span class="loan">${themeItemdata[themeItem][j][i].tag}</span>`
+                newContent += `<div class="info"><p>${themeItemdata[themeItem][j][i].info}</p>`
+                newContent += `<h6>${themeItemdata[themeItem][j][i].name}</h6></div>`
+                newContent += `<p>최고 <span>${themeItemdata[themeItem][j][i].price}</span> ${themeItemdata[themeItem][j][i].period}</p></li>`
                 }
-                $('#content .theme').append(`<ul>${newContent}</ul>`)
             }
+            $('#content .theme').append(`<ul>${newContent}</ul>`)
         })
     })
 
