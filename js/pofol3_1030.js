@@ -54,6 +54,7 @@
 
 
     /* themeItem 페이지 json data 불러오기 기본작업 */
+    // var themeItemdata1, themeItemdata2, themeItemdata3;
     var themeItemdata
     $.ajax({
         type: 'GET',
@@ -64,6 +65,9 @@
             }
         },
         success: function(data) {
+            // themeItemdata1 = data.themeCar;
+            // themeItemdata2 = data.themeKid;
+            // themeItemdata3 = data.themeHome;
             themeItemdata = data
         },
         error: function() {
@@ -77,46 +81,51 @@
         // var themeItem = $(this).attr('class')
         $('#container > #content').remove()
         $('#container').load(url + " #content", function() {
-            // var newContent = ''
-            // for (var j in themeItemdata[themeItem]) {
-            //     for (var i in themeItemdata[themeItem][j]) {
-            //     newContent += `<li><span class="loan">${themeItemdata[themeItem][j][i].tag}</span>`
-            //     newContent += `<div class="info"><p>${themeItemdata[themeItem][j][i].info}</p>`
-            //     newContent += `<h6>${themeItemdata[themeItem][j][i].name}</h6></div>`
-            //     newContent += `<p>최고 <span>${themeItemdata[themeItem][j][i].price}</span> ${themeItemdata[themeItem][j][i].period}</p></li>`
-            //     }
-            // }
-            // $('#content .theme').append(`<ul>${newContent}</ul>`)
+                // var theme = [ themeItemdata1, themeItemdata2, themeItemdata3 ]
+                // var newContent = '';
+                // for (var j=0; j<theme.length; j++) {
+                //     for (var i=0; i<theme[j].length; i++) {
+                //         newContent += `<li><span class="loan">${theme[j].tag}</span>`
+                //         newContent += `<div class="info"><p>${theme[j].info}</p>`
+                //         newContent += `<h6>${theme[j].name}</h6></div>`
+                //         newContent += `<p>최고 <span>${theme[j].price}</span> ${theme[j].period}</p></li>`
+                //     }
+                //     $('#content .theme').eq(j).append(`<ul>${newContent}</ul>`)
+                // }
+                
+                var newContent1 = ''
+                for (var i in themeItemdata["themeCar"]) {
+                newContent1 += `<li><span class="loan">${themeItemdata["themeCar"][i].tag}</span>`
+                newContent1 += `<div class="info"><p>${themeItemdata["themeCar"][i].info}</p>`
+                newContent1 += `<h6>${themeItemdata["themeCar"][i].name}</h6></div>`
+                newContent1 += `<p>최고 <span>${themeItemdata["themeCar"][i].price}</span> ${themeItemdata["themeCar"][i].period}</p></li>`
+                }
+                $('#content .theme').eq(0).append(`<ul>${newContent1}</ul>`)
+
+                var newContent2 = ''
+                for (var i in themeItemdata["themeKid"]) {
+                newContent2 += `<li><span class="loan">${themeItemdata["themeKid"][i].tag}</span>`
+                newContent2 += `<div class="info"><p>${themeItemdata["themeKid"][i].info}</p>`
+                newContent2 += `<h6>${themeItemdata["themeKid"][i].name}</h6></div>`
+                newContent2 += `<p>최고 <span>${themeItemdata["themeKid"][i].price}</span> ${themeItemdata["themeKid"][i].period}</p></li>`
+                }
+                $('#content .theme').eq(1).append(`<ul>${newContent2}</ul>`)
+
+                var newContent3 = ''
+                for (var i in themeItemdata["themeHome"]) {
+                newContent3 += `<li><span class="loan">${themeItemdata["themeHome"][i].tag}</span>`
+                newContent3 += `<div class="info"><p>${themeItemdata["themeHome"][i].info}</p>`
+                newContent3 += `<h6>${themeItemdata["themeHome"][i].name}</h6></div>`
+                newContent3 += `<p>최고 <span>${themeItemdata["themeHome"][i].price}</span> ${themeItemdata["themeHome"][i].period}</p></li>`
+                }
+                $('#content .theme').eq(2).append(`<ul>${newContent3}</ul>`)
 
 
-            var newContent1 = ''
-            for (var i in themeItemdata["themeCar"]) {
-            newContent1 += `<li><span class="loan">${themeItemdata["themeCar"][i].tag}</span>`
-            newContent1 += `<div class="info"><p>${themeItemdata["themeCar"][i].info}</p>`
-            newContent1 += `<h6>${themeItemdata["themeCar"][i].name}</h6></div>`
-            newContent1 += `<p>최고 <span>${themeItemdata["themeCar"][i].price}</span> ${themeItemdata["themeCar"][i].period}</p></li>`
-            }
-            $('#content .theme').eq(0).append(`<ul>${newContent1}</ul>`)
 
-            var newContent2 = ''
-            for (var i in themeItemdata["themeKid"]) {
-            newContent2 += `<li><span class="loan">${themeItemdata["themeKid"][i].tag}</span>`
-            newContent2 += `<div class="info"><p>${themeItemdata["themeKid"][i].info}</p>`
-            newContent2 += `<h6>${themeItemdata["themeKid"][i].name}</h6></div>`
-            newContent2 += `<p>최고 <span>${themeItemdata["themeKid"][i].price}</span> ${themeItemdata["themeKid"][i].period}</p></li>`
-            }
-            $('#content .theme').eq(1).append(`<ul>${newContent2}</ul>`)
-
-            var newContent3 = ''
-            for (var i in themeItemdata["themeHome"]) {
-            newContent3 += `<li><span class="loan">${themeItemdata["themeHome"][i].tag}</span>`
-            newContent3 += `<div class="info"><p>${themeItemdata["themeHome"][i].info}</p>`
-            newContent3 += `<h6>${themeItemdata["themeHome"][i].name}</h6></div>`
-            newContent3 += `<p>최고 <span>${themeItemdata["themeHome"][i].price}</span> ${themeItemdata["themeHome"][i].period}</p></li>`
-            }
-            $('#content .theme').eq(2).append(`<ul>${newContent3}</ul>`)
+            })
+            
         })
-    })
+
 
 // `<ul><li><span class="loan">tag</span>`
 // `<div class="info"><p>info</p>`
