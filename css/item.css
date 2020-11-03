@@ -5,6 +5,9 @@
 .itemContent {
     padding: 0 20px;
 }
+.itemContent .itemMenuTab {
+    margin-bottom: 20px;
+}
 .itemContent .itemMenuTab .tab {
     display: grid;
     grid-template-columns: auto auto auto auto auto auto;
@@ -22,10 +25,12 @@
 }
 
 
+
+/* themitem: 인기상품 */
 .itemContent .bestItem {
     position: relative;
     display: grid;
-    grid-template-columns: 50% auto;
+    grid-template-columns: auto;
     height:200px;
     margin:20px auto 40px;
     font-size: 14px;
@@ -79,61 +84,91 @@
 }
 
 
+/* 상품 검색 */
+#item_search {
+    margin: 20px 0;
+}
+#item_search p {
+    font-size: 14px;
+    display: grid;
+    grid-template-columns: 100px auto;
+    height: 45px;
+}
+#item_search label {
+    vertical-align: middle;
+    margin: 12px 10px ;
+    font-weight: 800;
+}
+#item_search #groupType, #item_search #item_name {
+    height: 40px;
+    border: 1px solid #ccc;
+    padding: 0 10px;
+}
+#item_search button {
+    display: inline-block;
+    width: 100%;
+    height: 40px;
+    background:  rgb(10, 177, 177);
+    margin: 10px 0;
+    color: #fff;
+}
+
+
 /* 테마 리스트 스타일 */
-.themeItem > h6 , .itemContent > h6 {
+.itemListWrap > h6 , .itemContent > h6 {
     text-align: center;
     font-size: 12px;
     margin: 20px 0;
 }
-.themeItem > h6 span, .itemContent > h6 span {
+.itemListWrap > h6 span, .itemContent > h6 span {
     color: rgb(255, 136, 0);
 }
-.theme {
+.itemList {
     line-height: 1.5;
 }
-.theme .themeTit {
+.itemList .itemListTit {
     font-size: 14px;
     padding: 10px 20px;
     text-align: center;
     background: darkslateblue;
     color: #fff;
 }
-.theme ul {
+.itemList ul {
     padding-bottom: 30px;
 }
-.theme ul li {
+.itemList ul li {
     padding: 20px;
     border-bottom: 1px solid #eee;
 }
-.theme .loan {
+.itemList .loan {
     background:  rgb(10, 177, 177);
     color: #fff;
     font-size: 12px;
     padding: 2px 5px;
     width: 70px;
 }
-.theme .save {
+.itemList .save {
     background:  rgb(255, 136, 0);
     color: #fff;
     font-size: 12px;
     padding: 2px 5px;
     width: 70px;
 }
-.theme .info {
+.itemList .info {
     margin: 5px 0;
 }
-.theme p {
+.itemList p {
     font-size: 12px;
     color: #888;
 }
-.theme h6 {
+.itemList h6 {
     font-size: 16px;
 }
-.theme p span {
+.itemList p span {
     color: rgb(255, 136, 0);
     font-weight: bold;
 }
-.theme .part {
+.itemList .part {
     font-size: 10px;
     color: #555;
     font-weight: 800;
